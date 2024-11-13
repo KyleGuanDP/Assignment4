@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Search</title>
+</head>
+<body>
+<h1>Search YouTube Videos</h1>
+<form action="/youtube-search" method="get">
+    <label for="topic">Enter topic:</label>
+    <input type="text" id="topic" name="topic" required>
+    <button type="submit">Search</button>
+</form>
+
+<div id="results">
+    <h2>Search Results:</h2>
+    <ul>
+        <!-- Thymeleaf 语法：遍历传递过来的搜索结果 -->
+        <li th:each="video : ${results}">
+            <h3 th:text="${video.title}"></h3>
+            <a th:href="${video.url}" target="_blank">
+                <img th:src="${video.thumbnailUrl}" alt="Thumbnail" />
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
