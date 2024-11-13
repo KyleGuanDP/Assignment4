@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 public class YouTubeSearchService {
 
-    private static final String API_KEY = "AIzaSyC6BLzm9ZDM8I8jbhF2YeqD0K20ji-AJ7A"; // 替换为你的API密钥
+    private static final String API_KEY = System.getenv("API_KEY"); // 替换为你的API密钥
 
     public List<VideoResult> searchVideos(String query) throws IOException, GeneralSecurityException {
         YouTube youtubeService = getYouTubeService();
