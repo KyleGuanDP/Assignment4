@@ -16,7 +16,7 @@ public class JooqConfig {
         PGSimpleDataSource dataSource = new PGSimpleDataSource();
         dataSource.setURL("jdbc:postgresql://aws-0-us-west-1.pooler.supabase.com:6543/postgres?prepareThreshold=0");
         dataSource.setUser("postgres.jjxrfxvoadgbjxhpxavd");
-        dataSource.setPassword("kotzyc-4peBka-viqnuv");
+        dataSource.setPassword(System.getenv("YoutubePassword"));
         return dataSource;
     }
 

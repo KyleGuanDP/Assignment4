@@ -21,7 +21,7 @@ import static org.example.generated.Tables.YOUTUBE_SEARCH_CACHE;
 @Service
 public class YouTubeSearchService {
 
-    private static final String API_KEY = "AIzaSyC6BLzm9ZDM8I8jbhF2YeqD0K20ji-AJ7A"; // 替换为你的API密钥
+    private static final String API_KEY = System.getenv("API_Key_Google"); // 替换为你的API密钥
 
     @Autowired
     private DSLContext dsl;
