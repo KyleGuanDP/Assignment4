@@ -30,4 +30,19 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework:spring-tx:6.1.14'
+
+
+    //database
+    implementation 'org.postgresql:postgresql:42.6.0'
+
+    //jooq
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.jooq:jooq:3.19.15'
+    implementation 'org.jooq:jooq-meta:3.19.15'
+    implementation 'org.jooq:jooq-codegen:3.19.15'
+    implementation 'org.postgresql:postgresql:42.7.4'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
 }

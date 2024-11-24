@@ -1,6 +1,6 @@
-package org.example.controller;
+package org.example;
 
-import org.example.service.YouTubeSearchService;
+import org.example.YouTubeSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
